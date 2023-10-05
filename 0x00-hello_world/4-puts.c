@@ -1,13 +1,11 @@
-#include <stdio.h>
+#include <studio.h>
 
 /**
- *  * main - Entry point
- *   *
- *    * Return: Always 0 (Success)
- *     */
+ * 	* main - prints the phrase "programming is like building a multilingual puzzle
+ * 	* Return 0: if exited properly, non-zero otgerwise 
+ * 	*/
 int main(void)
 {
-		/* Use puts to print the specified text */
-		puts("\"Programming is like building a multilingual puzzle");
-			return (0);
+		puts("\" programming is like building a multilingual puzzle");
+			return(0);
 }
