@@ -1,14 +1,10 @@
-#include <stdio.h>
-
+#include<stdio.h>
 /**
- *  * main - Entry point
+ *  * main - entry point
  *   *
- *    * Description:
- *     *   This is the main function that prints a 52-character message and returns 0.
- *      *
- *       * Return: Always 0
+ *    * Return: Always 0 (success)
  */
 int main(void)
-{	puts("Programming is like building a multilingual puzzle ");
+{	puts("\"Programming is like building a multilingual puzzle");
 	return (0);
 }
