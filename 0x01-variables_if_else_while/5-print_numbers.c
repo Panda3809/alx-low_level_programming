@@ -7,12 +7,10 @@
  */
 
 int main(void)
-{	char number;
-	for (number = 0; number <= 9; letter++)
+{	int i;
+	for (i = 0; i <= 9; i++)
 	{
-		if (letter != 'e' && letter != 'q')
-			putchar(letter);
-	}
-	putchar('\n');
-	return (0);
+		printf("%d", i);
+		printf("\n");
+		return (0);
 }
