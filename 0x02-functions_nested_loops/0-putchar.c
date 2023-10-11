@@ -1,4 +1,11 @@
-#include <main.h>
+#ifndef MAIN_H
+#define MAIN_H
+
+/* Function prototype for main() */
+int main(void);
+
+#endif
+#include "main.h"
 
 /**
  *  * main - Entry point
