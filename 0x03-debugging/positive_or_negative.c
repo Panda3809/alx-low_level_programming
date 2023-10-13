@@ -1,21 +1,22 @@
-#include "main.h"
-
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 /**
- *  * positive_or_negative - Determines whether an integr
- *   * @i: The integer to be checked
+ *  * main - Checks to see if a variable is positive
+ *   * Return: 0
  */
-void positive_or_negative(int i)
+int main(void)
 {
-	if (i > 0)
-	{
-		printf("%d is positive\n", i);
-	}
-	else if (i < 0)
-	{
-		printf("%d is negative\n", i);
-	}
+	int n;
+
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	if (n > 0)
+		printf("%d is positive\n", n);
+	else if (n == 0)
+		printf("%d is zero\n", n);
 	else
-	{
-		printf("%d is zero\n", i);
-	}
+		printf("%d is negative\n", n);
+	return (0);
 }
+
