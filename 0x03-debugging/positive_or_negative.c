@@ -1,8 +1,8 @@
 #include "main.h"
-#include <stdio.h>
+
 /**
- ** positive_or_negative - Determines if an integer
- ** @i: The integer to be checked
+ *  * positive_or_negative - Determines whether an integr
+ *   * @i: The integer to be checked
  */
 void positive_or_negative(int i)
 {
