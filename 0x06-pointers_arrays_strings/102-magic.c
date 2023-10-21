@@ -15,7 +15,7 @@ int main(void)
 	 * - only one statement
 	 * - you are not allowed to code anything else than this line of code
 	 */
-	p[5] = 98;
+	*(p + 5) = 98;
 	/*
 	 * Assign the value 98 to the integer element p[5], indirectly modifying n,
 	 * and then print a[2].
