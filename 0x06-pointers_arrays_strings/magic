@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main(void)
+{
+    int a[5]; // Declare an integer array 'a' with 5 elements.
+    int *p; // Declare a pointer 'p' to an integer.
+
+    a[2] = 1024; // Set the value at index 2 of array 'a' to 1024.
+    p = &a[2]; // Point 'p' to the address of 'a[2]'.
+
+    /* Add one line of code here */
+    p[5] = 98; // Set the value of the element before 'a[2]' to 98, effectively changing '[2]'.
+
+    printf("a[2] = %d\n", a[2]); // Print the value of 'a[2]'.
+    return (0);
+}
+
