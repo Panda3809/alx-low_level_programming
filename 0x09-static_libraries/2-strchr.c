@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- *  * _strchr - check the code
- *   * @s: String
- *    * @c: Character
- *     * Return: Pointer to first occurrence or NULL
+ * _strchr - check the code
+ * @s: String
+ * @c: Character
+ * Return: Pointer to first occurrence or NULL
  */
 char *_strchr(char *s, char c)
 {

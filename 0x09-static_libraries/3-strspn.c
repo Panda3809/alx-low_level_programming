@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- *  * _strspn - Check the code
- *   * @s: Segment
- *    * @accept: Contains bytes
- *     * Return: Always 0 (Success)
+ * _strspn - Check the code
+ * @s: Segment
+ * @accept: Contains bytes
+ * Return: Always 0 (Success)
  */
 unsigned int _strspn(char *s, char *accept)
 {
