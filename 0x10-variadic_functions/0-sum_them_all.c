@@ -2,24 +2,26 @@
 #include <stdarg.h>
 
 /**
- * sum_them_all - returns the sum of all its parameters
- * @n: number of parameters
- * Return: sum of all parameters
+ * sum_them_all - returns the sum of all its parameters.
+ * @n: parameter's number passed to a func.
+ * @...: infinite number of parameters
+ *
+ * Return: If n == 0, or else 0.
  */
 int sum_them_all(const unsigned int n, ...)
 {
-    va_list args;
-    unsigned int i;
-    int sum = 0;
+	unsigned int j, sum = 0;
+	va_list infinite;
 
-    if (n == 0)
-        return 0;
+	va_start(infinite, n);
+	if (n == 0)
+	return (0);
 
-    va_start(args, n);
-    for (i = 0; i < n; i++) {
-        sum += va_arg(args, int);
-    }
-    va_end(args);
+	for (j = 0; j < n; j++)
+{
+	sum += va_arg(infinite, int);
+										}
 
-    return (sum);
+	va_end(infinite);
+	return (sum);
 }
