@@ -2,50 +2,50 @@
 #include <stdarg.h>
 #include <stdio.h>
 
+/**
+ * print_all - a function that prints anything.
+ * @format: a list of types of arguments passed to the function
+ * Return: NULL
+ */
+
 void print_all(const char * const format, ...)
 {
-	va_list args;
-	va_start(args, format);
+	int i = 0;
+	va_list arg;
+	char *str = "(nil)";
+	char *array = NULL;
+	char *separator = ", ";
 
-	int printed = 0;
+	va_start(arg, format);
 
-	for (int i = 0; format && format[i]; ++i)
+	while (format[i] != '\0' && format != NULL)
 	{
-		char format_char = format[i];
-		printed = 0;
-
-		if (format_char == 'c')
+		switch (format[i])
 		{
-			printf("%c", va_arg(args, int));
-			printed = 1;
+			case 'c':
+				printf("%c", va_arg(arg, int));
+				break;
+			case 'i':
+				printf("%d", va_arg(arg, int));
+				break;
+			case 'f':
+				printf("%f", va_arg(arg, double));
+				break;
+			case 's':
+				array = va_arg(arg, char *);
+				if (array == NULL)
+					array = str;
+				printf("%s", array);
+				break;
+			default:
+				i++;
+				continue;
 		}
-
-		if (format_char == 'i')
-		{
-			printf("%d", va_arg(args, int));
-			printed = 1;
-		}
-
-		if (format_char == 'f')
-		{
-			printf("%f", (double)va_arg(args, double));
-			printed = 1;
-		}
-
-		if (format_char == 's')
-		{
-			char *str = va_arg(args, char *);
-			if (str == NULL)
-				printf("(nil)");
-			else
-				printf("%s", str);
-			printed = 1;
-		}
-
-		if (format[i] && printed)
-			printf(", ");
+		if ((format[i + 1] != '\0') && (format[i] == 'c' || format[i] == 'i' ||
+										format[i] == 'f' || format[i] == 's'))
+			printf("%s", separator);
+		i++;
 	}
-
-	va_end(args);
 	printf("\n");
+	va_end(arg);
 }
